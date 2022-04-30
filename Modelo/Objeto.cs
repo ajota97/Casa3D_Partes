@@ -93,11 +93,11 @@ namespace Casa3D_Partes.Modelo
         public void dibujarObjeto()
         {
             shader.Use();
-            setUniforms();
-            GL.BindVertexArray(VertexArrayObject);
-
-            GL.DrawElements(PrimitiveType.Triangles, indices.Length, DrawElementsType.UnsignedInt, 0);
-
+            setUniforms(); GL.Rotate(10, 1, 1, 0);
+             GL.BindVertexArray(VertexArrayObject);
+            
+             GL.DrawElements(PrimitiveType.Polygon, vertices.Length, DrawElementsType.UnsignedInt, 0);
+           
         }
 
      

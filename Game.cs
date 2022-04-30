@@ -48,12 +48,17 @@ namespace Casa3D_Partes
 
             uint[] indRoof = {
             //techo  caida der
-            0, 2, 4,
-            0, 3, 4,
+            0,2,4,3,
+            };
+
+            uint[] indRoof2 = {
+           
             //techo caida izq
-            1, 2, 4,
-            1, 4, 5,
-        };
+            1,2
+           // 1, 2, 4,
+           //1, 4, 5,
+             };
+
 
             float[] vertWall = {
              0.4f,-0.3f,0.4f, //p0
@@ -78,24 +83,25 @@ namespace Casa3D_Partes
         };
 
             uint[] indWall = {
+                0,15,1,6,5
              //pared frontal
-               0,15,10,
-               10,11,15,
-               1,14,15,
-               1,2,14,
-               3,12,14,
-               3,12,13,
-               1,2,4,
+               //0,15,10,
+               //10,11,15,
+               //1,14,15,
+               //1,2,14,
+               //3,12,14,
+               //3,12,13,
+               //1,2,4,
             //parel der
-                0, 1, 6,
-                0, 5, 6,
-            //pared izq
-                2, 3, 8,
-                3, 8, 9,
-            //pared del fondo
-                5, 8, 9,
-                5, 6, 8,
-                6, 7, 8,
+            //    0, 1, 6,
+            //    0, 5, 6,
+            ////pared izq
+            //    2, 3, 8,
+            //    3, 8, 9,
+            ////pared del fondo
+            //    5, 8, 9,
+            //    5, 6, 8,
+            //    6, 7, 8,
         };
 
             
@@ -109,11 +115,11 @@ namespace Casa3D_Partes
 
                 uint[] indDoor = {
              //puerta
-                0, 1, 3,
-                1, 2, 3,
-
+                0, 1,2, 3
         };
-            casa.Add(new Parte(vertRoof, indRoof, Color4.Black));
+
+            casa.Add(new Parte(vertRoof, indRoof, Color4.Beige));
+            casa.Add(new Parte(vertRoof, indRoof2, Color4.Black));
             casa.Add(new Parte(vertWall, indWall, Color4.Red));
             casa.Add(new Parte(vertDoor, indDoor,Color4.Blue));
           
